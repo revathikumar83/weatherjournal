@@ -1,0 +1,110 @@
+body {
+    background-image: url('https://www.lakesideresortproperties.com/wp-content/uploads/2014/12/FREEMEDIABANK_HD_0011.jpg');
+}
+
+h1 {
+    text-align: center;
+    color: rgb(247, 247, 239);
+    margin-left: 180px;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+#weather {
+    width: 70%;
+    height: 90vh;
+    background-color: rgb(30, 28, 49);
+    margin-left: 270px;
+    margin-top: 100px;
+    border-radius: 20px;
+    opacity: 0.6;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    width: 240px;
+    margin-left: 370px;
+}
+
+#feelings {
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 40px;
+    height: 50px;
+    font-size: 25px;
+}
+
+#entryHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#zip {
+    height: 50px;
+    color: black;
+    font-size: 20px;
+}
+
+#generate {
+    width: 230px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    float: center;
+    padding: 10px;
+    background-color: lightslategrey;
+    font-size: 20px;
+}
+
+#date {
+    border: 1px burlywood;
+    border-radius: 20px;
+    background-color: white;
+    width: 140px;
+    height: 80px;
+    padding-top: 60px;
+    font-size: 20px;
+}
+
+#content {
+    border: 1px burlywood;
+    border-radius: 20px;
+    background-color: white;
+    width: 140px;
+    height: 80px;
+    padding-top: 60px;
+    font-size: 20px;
+}
+
+#temp {
+    border: 1px burlywood;
+    border-radius: 20px;
+    background-color: white;
+    width: 140px;
+    height: 80px;
+    padding-top: 60px;
+    font-size: 20px;
+}
+
+#last {
+    border: 1px gray;
+    background-color: honeydew;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 170px;
+    margin-right: 100px;
+    height: 40px;
+    padding: 20px;
+    font-size: 25px;
+}
