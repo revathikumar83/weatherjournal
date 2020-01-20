@@ -1,18 +1,20 @@
 
-let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=94040,us'
+let baseURL = `https://api.openweathermap.org/data/2.5/weather?zip='+zip.value+',us`;
 let apiKey = '&appid=4264a70a71921333d90bc52c223618a2';
 
-
+//`${baseURL}?+zip.value+,us&units=metric&APPID=${apiKey}`
+//'https://api.openweathermap.org/data/2.5/weather?zip=94040,us&units=metric'
 let d = new Date()
 let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear()
 
 document.getElementById('generate').addEventListener('click', performAction);
 
 function performAction(e) {
-	const last = document.getElementById('feelings');
+	
+  const last1 = document.getElementById('feelings');
 	const zip = document.getElementById('zip');
-
-	fetchWeather(baseURL, zip.value, apiKey)
+  fetchWeather(baseURL, zip.value, apiKey)
+  
 		// New Syntax!
 		.then(function (userData) {
 			// Add data
@@ -21,7 +23,7 @@ function performAction(e) {
 				date: newDate,
 				temp: userData.main.temp,
 				content: userData.main.feels_like,
-				last: last.value
+				last: userData.name
 			});
 		})
 		.then(
@@ -41,7 +43,7 @@ const postData = async(url = '', data = {}) => {
 			date: data.date,
 			temp: data.temp,
 			content: data.content,
-
+      last:data.last
 		}) // body data type must match "Content-Type" header        
 	});
 
@@ -54,8 +56,8 @@ const postData = async(url = '', data = {}) => {
 	}
 }
 
-const fetchWeather = async(baseURL, zip, apiKey) => {
-	const res = await fetch('https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=4264a70a71921333d90bc52c223618a2')
+const fetchWeather = async(baseURL , apiKey) => {
+	const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip.value},us&units=metric&appid=4264a70a71921333d90bc52c223618a2`)
 	try {
 		const data = await res.json();
 
@@ -71,8 +73,8 @@ const updateUI = async() => {
 	try {
 		const data = await request.json()
 		document.getElementById('date').innerHTML = `<span class="update"> Date: <br></span> ${data.date}`;
-		document.getElementById('content').innerHTML = `<span class="update"> Feels like: <br></span> ${data.content}`;
-		document.getElementById('temp').innerHTML = `<span class="update"> Temperature: <br></span> ${data.temp}`
+		document.getElementById('content').innerHTML = `<span class="update"> Feels like: <br></span> ${data.content} c`;
+		document.getElementById('temp').innerHTML = `<span class="update"> Temperature: <br></span> ${data.temp} c`
 		document.getElementById('last').innerText = `${data.last}`;
 
 	} catch (error) {

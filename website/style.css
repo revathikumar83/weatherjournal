@@ -15,8 +15,8 @@ h4 {
 }
 
 #weather {
-    width: 70%;
-    height: 90vh;
+    width: 65%;
+    height: 75vh;
     background-color: rgb(30, 28, 49);
     margin-left: 270px;
     margin-top: 100px;
@@ -34,13 +34,6 @@ h4 {
     margin-left: 370px;
 }
 
-#feelings {
-    margin-bottom: 40px;
-    text-align: center;
-    margin-top: 40px;
-    height: 50px;
-    font-size: 25px;
-}
 
 #entryHolder {
     display: flex;
@@ -54,6 +47,9 @@ h4 {
     height: 50px;
     color: black;
     font-size: 20px;
+    text-align: center;
+    border:1px lightslategrey;
+    border-radius: 5px;
 }
 
 #generate {
@@ -63,8 +59,9 @@ h4 {
     text-align: center;
     float: center;
     padding: 10px;
-    background-color: lightslategrey;
+    background-color: blue;
     font-size: 20px;
+    margin-top: 40px;
 }
 
 #date {
@@ -99,11 +96,10 @@ h4 {
 
 #last {
     border: 1px gray;
+    border-radius: 10px;
     background-color: honeydew;
     text-align: center;
-    margin-top: 70px;
-    margin-left: 170px;
-    margin-right: 100px;
+    margin-top: 65px;
     height: 40px;
     padding: 20px;
     font-size: 25px;
